@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import {Navbar, Container, Nav} from "react-bootstrap"
-
+import {Navbar, Container, Nav} from "react-bootstrap";
+import logo from "../assets/images/logo.png"
 
 const NavBar = () => {
 
@@ -22,10 +22,10 @@ const NavBar = () => {
     }, [])
 
     return(
-        <Navbar>
+        <Navbar expand='lg' >
             <Container>
                 <Navbar.Brand>
-                    <img src="" alt="logo" />
+                    <img src={logo} alt="logo" />
                 </Navbar.Brand>
                 <Navbar.Toggle>
                     <span className="navbar-toggle-icon"></span>
