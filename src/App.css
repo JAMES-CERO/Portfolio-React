@@ -38,6 +38,16 @@ html {
   background-repeat: no-repeat;
 }
 
+.banner button {
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+
 body {
   font-weight: 400;
   overflow-x: hidden;
