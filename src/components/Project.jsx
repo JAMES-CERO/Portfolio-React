@@ -8,7 +8,7 @@ const Project = () => {
         {
             title: "Milestone",
             description: "lorem4",
-            imgUrl: "",
+            imgUrl: "https://pin.it/48Z9Bgg",
             url: "",
         },
         {
@@ -32,23 +32,23 @@ const Project = () => {
 
     ]
     return (
-        <section className="project" id="project"> 
+        <section className="project" id="project">
             <h1>Project</h1>
             <Container>
                 <Row>
                     <Col>
                         <h2> Projects</h2>
                         <p> Lorem ipsum dolor sit.</p>
-                        <Tab.Container id="project-tab" defaultActiveKey="first">
+                        <Tab.Container id="projects-tabs" defaultActiveKey="first">
                             <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                 <Nav.Item>
-                                    <Nav.Link eventKey="first">Tab1</Nav.Link>
+                                    <Nav.Link eventKey="first">Tab 1</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="second">Tab2</Nav.Link>
+                                    <Nav.Link eventKey="second">Tab 2</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="third" >Tab3</Nav.Link>
+                                    <Nav.Link eventKey="third">Tab 3</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                             <Tab.Content>
@@ -57,13 +57,13 @@ const Project = () => {
                                         {
                                             projects.map((project, index) => {
                                                 return (
-                                                    <ProjectCards key={index}> {project.title}</ProjectCards>
+                                                    <ProjectCards key={index} {...project} />
                                                 )
                                             })
                                         }
                                     </Row>
                                 </Tab.Pane>
-                                <Tab.Pane eventKey='second'> Lorem.</Tab.Pane>
+                                <Tab.Pane eventKey='section'> Lorem.</Tab.Pane>
                                 <Tab.Pane eventKey='third'> Lorem.</Tab.Pane>
                             </Tab.Content>
                         </Tab.Container>
