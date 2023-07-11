@@ -1,51 +1,61 @@
 import { useEffect, useState } from "react";
-import {Navbar, Container, Nav} from "react-bootstrap";
-import logo from "../assets/images/logo.png"
+import { Navbar, Container, Nav } from "react-bootstrap";
+import logo from "../assets/images/logo.svg"
 
 const NavBar = () => {
 
-    const [activeLink, setActiveLink] = useState("home");
+    const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
-
+  
     useEffect(() => {
-        const onScroll = () => {
-            if(window.scrollY > 50) {
-                setScrolled(true);
-            } else {
-                setScrolled(false)
-            }
+      const onScroll = () => {
+        if (window.scrollY > 50) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
         }
-
-        window.addEventListener("scroll", onScroll())
-
-        return () => window.removeEventListener("scroll", onScroll)
+      }
+  
+      window.addEventListener("scroll", onScroll);
+  
+      return () => window.removeEventListener("scroll", onScroll);
     }, [])
+  
+    const onUpdateActiveLink = (value) => {
+      setActiveLink(value);
+    }
+  
+    return (
+     
+        <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+        <Container>
+          <Navbar.Brand href="/">
+            <img src={logo} alt="Logo" />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
+            <span className="navbar-toggler-icon"></span>
+          </Navbar.Toggle>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
+              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+            </Nav>
+            <span className="navbar-text">
+              <div className="social-icon">
+                <a href="#"><img  alt="" /></a>
+                <a href="#"><img  alt="" /></a>
+                <a href="#"><img  alt="" /></a>
+              </div>
+   
+                <button className="vvd"><span>Contact Me</span></button>
+ 
+            </span>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
-    return(
-        <Navbar expand='lg' >
-            <Container>
-                <Navbar.Brand>
-                    <img src={logo} alt="logo" />
-                </Navbar.Brand>
-                <Navbar.Toggle>
-                    <span className="navbar-toggle-icon"></span>
-                </Navbar.Toggle>
-                <Navbar.Collapse  >
-                    <Nav className="me-auto">
-                        <Nav.Link> HOME</Nav.Link>
-                        <Nav.Link> SKILLS</Nav.Link>
-                        <Nav.Link> PROJECTS</Nav.Link>
-                    </Nav>
-                    <span className="navbar-text">
-                        <div className="social-icon">
-                            <a><img/></a>
-                        </div>
-                        <button className="vvd" onClick={() => console.log('connect')}><span>Contact Me</span></button>
-                    </span>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
     )
-}
+  }
 
-export default NavBar;
+  export default NavBar;
