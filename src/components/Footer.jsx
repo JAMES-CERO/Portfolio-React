@@ -1,10 +1,9 @@
-import { Container } from "react-bootstrap"
+import { Container, Col, Row } from "react-bootstrap"
 import MailChimpForm from "./MailChimpForm"
 import logo from "../assets/images/logo.svg"
 import LinkedinLogo from "../assets/images/nav-linkedin.svg"
 import FBLogo from "../assets/images/nav-Fb.svg"
 import IGLogo from "../assets/images/nav-ig.svg"
-
 
 const Footer = () => {
 
@@ -18,9 +17,9 @@ const Footer = () => {
                     </Col>
                     <Col size={12} sm={6} className='text-center text-sm-end'>
                         <div className="social-icon">
-                            <a href="" ><img src={""} /></a>
-                            <a href="" ><img src={""} /></a>
-                            <a href="" ><img src={""} /></a>
+                            <a href="https://github.com/JAMES-CERO"><img src={LinkedinLogo} alt="inLOGO" /></a>
+                            <a href="#"><img src={FBLogo} alt="FBlogo" /></a>
+                            <a href="#"><img src={IGLogo} alt="IGlogo" /></a>
                         </div>
                         <p>Copyright 2022. All Rights Reserved</p>
                     </Col>
@@ -30,4 +29,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default Footer;

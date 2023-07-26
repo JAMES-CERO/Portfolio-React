@@ -5,7 +5,7 @@ import Banner from './components/Banner';
 import Skills from './components/Skills';
 import Project from './components/Project'
 import  Contact  from './components/Contact';
-import MailChimpForm from './components/MailChimpForm';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <Skills />
       <Project />
       <Contact />
-      <MailChimpForm />
+      <Footer />
     </div>
   );
 }

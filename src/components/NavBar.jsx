@@ -46,9 +46,9 @@ const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src={LinkedinLogo}  alt="" /></a>
-                <a href="#"><img src={FBLogo}  alt="" /></a>
-                <a href="#"><img src={IGLogo}  alt="" /></a>
+                <a href="#"><img src={LinkedinLogo}  alt="inLOGO" /></a>
+                <a href="#"><img src={FBLogo}  alt="FBlogo" /></a>
+                <a href="#"><img src={IGLogo}  alt="IGlogo" /></a>
               </div>
    
                 <button className="vvd"><span>Contact Me</span></button>
