@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/images/logo.svg"
+import LinkedinLogo from "../assets/images/nav-linkedin.svg"
+import FBLogo from "../assets/images/nav-Fb.svg"
+import IGLogo from "../assets/images/nav-ig.svg"
 
 const NavBar = () => {
 
@@ -43,9 +46,9 @@ const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img  alt="" /></a>
-                <a href="#"><img  alt="" /></a>
-                <a href="#"><img  alt="" /></a>
+                <a href="#"><img src={LinkedinLogo}  alt="" /></a>
+                <a href="#"><img src={FBLogo}  alt="" /></a>
+                <a href="#"><img src={IGLogo}  alt="" /></a>
               </div>
    
                 <button className="vvd"><span>Contact Me</span></button>
