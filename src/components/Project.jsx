@@ -1,33 +1,35 @@
 import { Col, Container, Row, Tab, Nav } from "react-bootstrap";
 import ProjectCards from "./ProjectCards";
 import TrackVisibility from "react-on-screen";
-import 'animate.css'
+import 'animate.css';
+import githublogo from "../assets/images/githublogo.png"
+
 
 const Project = () => {
 
     const projects = [
         {
             title: "Milestone",
-            description: "lorem4",
-            imgUrl: "https://pin.it/48Z9Bgg",
+            description: "lorem1",
+            imgUrl: "https://www.waca.associates/en/wp-content/uploads/2021/02/1_WY7ELhXIVxbGlUwmhA1PSw.jpeg",
             url: "",
         },
         {
             title: "Milestone2",
-            description: "lorem4",
-            imgUrl: "",
+            description: "lorem2",
+            imgUrl: "https://www.waca.associates/en/wp-content/uploads/2021/02/1_WY7ELhXIVxbGlUwmhA1PSw.jpeg",
             url: "",
         },
         {
             title: "Milestone3",
-            description: "lorem4",
-            imgUrl: "",
+            description: "lorem3",
+            imgUrl: "https://www.waca.associates/en/wp-content/uploads/2021/02/1_WY7ELhXIVxbGlUwmhA1PSw.jpeg",
             url: "",
         },
         {
             title: "Milestone4",
             description: "lorem4",
-            imgUrl: "",
+            imgUrl: "https://www.waca.associates/en/wp-content/uploads/2021/02/1_WY7ELhXIVxbGlUwmhA1PSw.jpeg",
             url: "",
         },
 
