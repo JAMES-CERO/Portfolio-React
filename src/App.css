@@ -380,7 +380,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
 }
 .project .nav.nav-pills .nav-item {
-  flex: 1;
+  width: 33.33333%;
 }
 .project .nav.nav-pills .nav-link {
   background-color: transparent;

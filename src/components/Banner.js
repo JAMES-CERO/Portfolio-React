@@ -12,6 +12,7 @@ const Banner = () => {
     const [isDelete, setIsDelete] = useState(false);
     const [text, setText] = useState('');
     const period = 2000;
+    const [index, setIndex] = useState(1);
     const [delta, setDelta] = useState(300 - Math.random() * 100);
 
     useEffect(() => {
@@ -19,23 +20,27 @@ const Banner = () => {
         const tick = () => {
             let i = loopNum % toRotate.length;
             let fullText = toRotate[i];
-            let upddatedText = isDelete ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+            let updatedText = isDelete ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
 
-            setText(upddatedText);
+            setText(updatedText);
 
             if (isDelete) {
-                setDelta(prevDelta => prevDelta / 2)
+                setDelta(prevDelta => prevDelta / 2);
             }
-            if (!isDelete && upddatedText == fullText) {
+
+            if (!isDelete && updatedText === fullText) {
                 setIsDelete(true);
+                setIndex(prevIndex => prevIndex - 1);
                 setDelta(period);
-            }
-            else if (!isDelete && upddatedText == '') {
+            } else if (isDelete && updatedText === '') {
                 setIsDelete(false);
                 setLoopNum(loopNum + 1);
-                setDelta(500)
+                setIndex(1);
+                setDelta(500);
+            } else {
+                setIndex(prevIndex => prevIndex + 1);
             }
-        };
+        }
 
 
 

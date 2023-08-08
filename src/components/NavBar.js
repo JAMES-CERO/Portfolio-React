@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import logo from "../assets/images/logo.svg"
+import logo from "../assets/images/logo.svg";
 import LinkedinLogo from "../assets/images/nav-linkedin.svg"
-import FBLogo from "../assets/images/nav-Fb.svg"
-import IGLogo from "../assets/images/nav-ig.svg"
+import FBLogo from "../assets/images/nav-Fb.svg";
+import IGLogo from "../assets/images/nav-ig.svg";
 import { HashLink } from 'react-router-hash-link';
-import { BrowserRouter as Router } from "react-router-dom"
+import { BrowserRouter as Router } from "react-router-dom";
 
 const NavBar = () => {
 
