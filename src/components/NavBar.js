@@ -52,7 +52,7 @@ const NavBar = () => {
                                 <a href="#"><img src={FBLogo} alt="FBlogo" /></a>
                                 <a href="#"><img src={IGLogo} alt="IGlogo" /></a>
                             </div>
-                            <HashLink>
+                            <HashLink to="#connect">
                                 <button className="vvd"><span>Contact Me</span></button>
                             </HashLink>
                         </span>
