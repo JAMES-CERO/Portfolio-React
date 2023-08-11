@@ -1,32 +1,29 @@
-import { Container, Col, Row } from "react-bootstrap"
-import MailChimpForm from "./MailChimpForm"
-import logo from "../assets/images/logo.svg"
-import LinkedinLogo from "../assets/images/nav-linkedin.svg"
-import FBLogo from "../assets/images/nav-Fb.svg"
-import IGLogo from "../assets/images/nav-ig.svg"
+import { Container, Row, Col } from "react-bootstrap";
+import { MailchimpForm } from "./MailchimpForm";
+import logo from "../assets/img/logo.png";
+import navIcon1 from "../assets/img/nav-icon1.svg";
+import navIcon2 from "../assets/img/nav-icon2.svg";
+import navIcon3 from "../assets/img/nav-icon3.svg";
 
-const Footer = () => {
-
-    return (
-        <footer className="footer">
-            <Container>
-                <Row className='align-item-center'>
-                    <MailChimpForm />
-                    <Col size={12} sm={6}>
-                        <img src={logo} alt='Logo' />
-                    </Col>
-                    <Col size={12} sm={6} className='text-center text-sm-end'>
-                        <div className="social-icon">
-                            <a href="https://github.com/JAMES-CERO"><img src={LinkedinLogo} alt="inLOGO" /></a>
-                            <a href="#"><img src={FBLogo} alt="FBlogo" /></a>
-                            <a href="#"><img src={IGLogo} alt="IGlogo" /></a>
-                        </div>
-                        <p>Copyright 2022. All Rights Reserved</p>
-                    </Col>
-                </Row>
-            </Container>
-        </footer>
-    )
+export const Footer = () => {
+  return (
+    <footer className="footer">
+      <Container>
+        <Row className="align-items-center">
+          <MailchimpForm />
+          <Col size={12} sm={6}>
+            <img src={logo} alt="Logo" />
+          </Col>
+          <Col size={12} sm={6} className="text-center text-sm-end">
+            <div className="social-icon">
+              <a href="https://www.linkedin.com/in/james-aules-dev/" target="_blank"><img src={navIcon1} alt="" /></a>
+              <a href="https://github.com/JAMES-CERO" target="_blank"><img src={navIcon2} alt="" /></a>
+              <a href="https://www.instagram.com/james_aules/" target="_blank"><img src={navIcon3} alt="" /></a>
+            </div>
+            <p>Copyright 2023. All Rights Reserved</p>
+          </Col>
+        </Row>
+      </Container>
+    </footer>
+  )
 }
-
-export default Footer;

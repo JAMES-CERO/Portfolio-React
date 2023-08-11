@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/images/logoimg.png";
+import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-const Contact = () => {
+export const Contact = () => {
   const formInitialDetails = {
     firstName: '',
     lastName: '',
@@ -93,5 +93,3 @@ const Contact = () => {
     </section>
   )
 }
-
-export default Contact;

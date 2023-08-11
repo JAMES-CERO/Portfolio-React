@@ -1,30 +1,21 @@
 /************ Custom Font ************/
 @font-face {
 	font-family: Centra;
-	src: url('./assets/Fonts/CentraNo2-Bold.ttf');
+	src: url('./assets/font/CentraNo2-Bold.ttf');
 	font-weight: 700;
 }
 @font-face {
 	font-family: Centra;
-	src: url('./assets/Fonts/CentraNo2-Medium.ttf');
+	src: url('./assets/font/CentraNo2-Medium.ttf');
 	font-weight: 500;
 }
 @font-face {
 	font-family: Centra;
-	src: url('./assets/Fonts/CentraNo2-Book.ttf');
+	src: url('./assets/font/CentraNo2-Book.ttf');
 	font-weight: 400;
 }
 
-
-
-
-.navbar-brand img {
-  width: 80px; /* Adjust the width as per your requirement */
-  height: auto;
-  margin-right: 10px; /* Add margin-right to create space between logo and navbar text */
-}
-
-
+/************ Default Css ************/
 * {
   margin: 0;
   padding: 0;
@@ -90,9 +81,7 @@ p.success {
 p.danger {
 	color: red;
 }
-
-/*Navbar*/
-
+/************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
   position: fixed;
@@ -245,7 +234,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/images/windowBg.jpeg');
+  background-image: url('./assets/img/banner-bg.png');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -377,7 +366,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 50px;
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
-  display: flex;
 }
 .project .nav.nav-pills .nav-item {
   width: 33.33333%;
@@ -553,6 +541,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
+  background-image: url('./assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
